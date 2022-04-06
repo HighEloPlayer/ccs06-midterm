@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('start', [StudentsController::class, 'start']);
+Route::post('enter-attempts', [StudentsController::class, 'enterAttempts']);
+Route::post('compute-grade', [StudentsController::class, 'computeGrade']);
+
